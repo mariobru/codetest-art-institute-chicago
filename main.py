@@ -6,9 +6,14 @@ import random
 import argparse
 
 def getConfig():
+    """
+    This function gets the page and limit parameters
+    from user's input in terminal.
+    """
+
     parser = argparse.ArgumentParser(description='This script solves StyleSage Data Operations Coding Test, sending requests to AIC API.')
-    parser.add_argument('-p', '--page', type=int, help='Enter the page number from 1 to 100 that the API request will use.')
-    parser.add_argument('-l', '--limit', type=int, help='Set how many record each page should return.')
+    parser.add_argument('-p', '--page', type=int, help='Enter the page number from 1 to 100 that the API request will use. Default: 2')
+    parser.add_argument('-l', '--limit', type=int, help='Set how many record each page should return. Default: 12')
     args = parser.parse_args()
     return args
 
@@ -61,9 +66,11 @@ def gatherData(data):
 
     filtered_data = []
     for d in data:
+        # Select a random artwork and gather its info with getArtworkInfo()
         r = random.randrange(len(d['artwork_ids']))
         rand_artwork = d['artwork_ids'][r]
         artwork_info = getArtworkInfo(rand_artwork)
+        # Create a dictionary with all the requested info
         agent = {}
         agent['title'] = d['title']
         agent['description'] = d['description']

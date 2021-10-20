@@ -28,9 +28,9 @@ This scrip is very easy to use. You just need to run the following command:
 optional arguments:
   -h, --help            show this help message and exit
   -p PAGE, --page PAGE  Enter the page number from 1 to 100 that the API
-                        request will use. Default : 2
+                        request will use. Default: 2
   -l LIMIT, --limit LIMIT
-                        Set how many record each page should return. Default : 12
+                        Set how many record each page should return. Default: 12
 ```
 
 
