@@ -1,7 +1,7 @@
 # codetest-art-institute-chicago
 
 ## Introduction
-The purpose of this repository is to satisfy the requirements of StyleSage Data Operations code test for an interview.
+The purpose of this repository is to satisfy the requirements of StyleSage Data Operations code test for a tech interview.
 
 ## Configuration
 Fork and/or clone this repo into your computer:
